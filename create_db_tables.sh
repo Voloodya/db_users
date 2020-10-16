@@ -1,11 +1,11 @@
-echo "Старт mysql"
-sudo /etc/init.d/mysql start
-echo "Вход в mysql"
+echo "Start mysql"
+#sudo /etc/init.d/mysql start
+echo "Input в mysql"
 mysql -u root -p
 echo "Создние БД"
-CREATE DATABASE  db-users;
+CREATE DATABASE  db_users;
 echo "Вход в БД"
-USE db-users;
+USE db_users;
 
 echo "Создание таблицы Users"
 create table Users{

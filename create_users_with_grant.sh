@@ -1,5 +1,5 @@
 echo "Старт mysql"
-sudo /etc/init.d/mysql start
+#sudo /etc/init.d/mysql start
 echo "Удаление пользователя"
 DROP USER 'vldmr'@'localhost';
 echo "Создание пользователя 1"
