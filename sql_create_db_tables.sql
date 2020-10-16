@@ -30,7 +30,7 @@ create table GrantAuthority(
 create table DataUser(
 	Id_DataUser int(11) NOT NULL AUTO_INCREMENT,
 	User_id int(11) NOT NULL,
-	CONSTRAINT FK_GrantAuthority_Users FOREIGN KEY (User_id) REFERENCES Users (Id_Users)
+	CONSTRAINT FK_DataUser_Users FOREIGN KEY (User_id) REFERENCES Users (Id_Users)
 	ON DELETE CASCADE,
 	Full_name_company VARCHAR(256) NULL,
 	Short_name_company VARCHAR(256) NULL,
