@@ -1,6 +1,7 @@
-CREATE DATABASE  db_users;
+DROP DATABASE IF EXISTS db_users;
+CREATE DATABASE IF NOT EXISTS  db_users;
 USE db_users;
-create table Users{
+create table Users(
 	Id_Users int(11) NOT NULL AUTO_INCREMENT,
 	Login VARCHAR(50) NOT NULL,
 	Password VARCHAR(1000) NOT NULL,
@@ -9,12 +10,12 @@ create table Users{
 	email VARCHAR(50) not null,
 	First_name VARCHAR(100) NOT NULL,
 	Last_name VARCHAR(100) NOT NULL
-};
-create table Roles{
+);
+create table Roles(
 	Id_Roles int(11) NOT NULL AUTO_INCREMENT,
 	Description text NULL
-};
-create table GrantAuthority{
+);
+create table GrantAuthority(
 	Id_GrantAuthority int(11) NOT NULL AUTO_INCREMENT,
 	User_id int(11) NOT NULL,
 	CONSTRAINT FK_GrantAuthority_Users FOREIGN KEY (User_id) REFERENCES Users (Id_Users)
@@ -22,8 +23,8 @@ create table GrantAuthority{
 	Role_id int(11) NOT NULL,
 	CONSTRAINT FK_GrantAuthority_Roles FOREIGN KEY (Role_id) REFERENCES Roles (Id_Roles)
 	ON DELETE CASCADE 
-};
-create table DataUser{
+);
+create table DataUser(
 	Id_GrantAuthority int(11) NOT NULL AUTO_INCREMENT,
 	User_id int(11) NOT NULL,
 	CONSTRAINT FK_GrantAuthority_Users FOREIGN KEY (User_id) REFERENCES Users (Id_Users)
@@ -33,4 +34,4 @@ create table DataUser{
 	First_name VARCHAR(100) NOT NULL,
 	Patronymic_name VARCHAR(100) NULL,
 	Family_name VARCHAR(100) not null	 
-};
+);
