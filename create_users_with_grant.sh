@@ -7,9 +7,9 @@ CREATE USER 'vs'@'localhost' IDENTIFIED BY '123';
 echo "Создание пользователя 2"
 CREATE USER 'vldmr'@'localhost' IDENTIFIED BY '123';
 echo "Назначение прав пользователя 1"
-GRANT ALL PRIVILEGES ON db.* TO 'vs'@'localhost' with GRANT OPTION;
+GRANT ALL PRIVILEGES ON db_users.* TO 'vs'@'localhost' with GRANT OPTION;
 echo "Назначение прав пользователя 2"
-GRANT ALL PRIVILEGES ON db.* TO 'vs'@'localhost' with GRANT OPTION;
+GRANT ALL PRIVILEGES ON db_users.users TO 'vldmr'@'localhost';
 
 FLUSH PRIVILEGES;
 
