@@ -12,7 +12,7 @@ create table Users{
 };
 create table Roles{
 	Id_Roles int(11) NOT NULL AUTO_INCREMENT,
-	Description text NULL,
+	Description text NULL
 };
 create table GrantAuthority{
 	Id_GrantAuthority int(11) NOT NULL AUTO_INCREMENT,
@@ -21,7 +21,7 @@ create table GrantAuthority{
 	ON DELETE CASCADE,
 	Role_id int(11) NOT NULL,
 	CONSTRAINT FK_GrantAuthority_Roles FOREIGN KEY (Role_id) REFERENCES Roles (Id_Roles)
-	ON DELETE CASCADE, 
+	ON DELETE CASCADE 
 };
 create table DataUser{
 	Id_GrantAuthority int(11) NOT NULL AUTO_INCREMENT,
