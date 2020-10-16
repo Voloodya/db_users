@@ -28,7 +28,7 @@ create table GrantAuthority(
 	PRIMARY KEY (Id_GrantAuthority)
 );
 create table DataUser(
-	Id_GrantAuthority int(11) NOT NULL AUTO_INCREMENT,
+	Id_DataUser int(11) NOT NULL AUTO_INCREMENT,
 	User_id int(11) NOT NULL,
 	CONSTRAINT FK_GrantAuthority_Users FOREIGN KEY (User_id) REFERENCES Users (Id_Users)
 	ON DELETE CASCADE,
@@ -37,5 +37,5 @@ create table DataUser(
 	First_name VARCHAR(100) NOT NULL,
 	Patronymic_name VARCHAR(100) NULL,
 	Family_name VARCHAR(100) not null,
-	PRIMARY KEY (DataUser)	
+	PRIMARY KEY (Id_DataUser)	
 );
