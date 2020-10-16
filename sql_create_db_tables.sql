@@ -9,11 +9,13 @@ create table Users(
 	Status VARCHAR(25),
 	email VARCHAR(50) not null,
 	First_name VARCHAR(100) NOT NULL,
-	Last_name VARCHAR(100) NOT NULL
+	Last_name VARCHAR(100) NOT NULL,
+	PRIMARY KEY (Id_Users)
 );
 create table Roles(
 	Id_Roles int(11) NOT NULL AUTO_INCREMENT,
-	Description text NULL
+	Description text NULL,
+	PRIMARY KEY (Id_Roles)
 );
 create table GrantAuthority(
 	Id_GrantAuthority int(11) NOT NULL AUTO_INCREMENT,
@@ -22,7 +24,8 @@ create table GrantAuthority(
 	ON DELETE CASCADE,
 	Role_id int(11) NOT NULL,
 	CONSTRAINT FK_GrantAuthority_Roles FOREIGN KEY (Role_id) REFERENCES Roles (Id_Roles)
-	ON DELETE CASCADE 
+	ON DELETE CASCADE,
+	PRIMARY KEY (Id_GrantAuthority)
 );
 create table DataUser(
 	Id_GrantAuthority int(11) NOT NULL AUTO_INCREMENT,
@@ -33,5 +36,6 @@ create table DataUser(
 	Short_name_company VARCHAR(256) NULL,
 	First_name VARCHAR(100) NOT NULL,
 	Patronymic_name VARCHAR(100) NULL,
-	Family_name VARCHAR(100) not null	 
+	Family_name VARCHAR(100) not null,
+	PRIMARY KEY (DataUser)	
 );
