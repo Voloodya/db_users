@@ -10,3 +10,5 @@ echo "Updating index repository"
 sudo apt-get update
 echo "Install mysql-server mysql-client"
 apt-get install mysql-server mysql-client
+echo "Test service mysql"
+sudo systemctl status mysql

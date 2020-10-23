@@ -11,7 +11,7 @@ create table Users(
 	First_name VARCHAR(100) NOT NULL,
 	Last_name VARCHAR(100) NOT NULL,
 	Created DateTime NOT NULL,
-	Updated DateTime NOT NULL
+	Updated DateTime NOT NULL,
 	PRIMARY KEY (Id_Users)
 );
 create table Roles(
