@@ -44,3 +44,7 @@ INSERT INTO Users (Id_Users, Login, Password, Word_coder, Status, email, First_n
 INSERT INTO Roles VALUES (1,'ROLE_ADMIN');
 INSERT INTO Roles VALUES (2,'ROLE_USER');
 INSERT INTO User_roles VALUES (1,1,1);
+show tables;
+select Id_users, Login, First_name, Data_user_id from Users;
+select Id_roles, Name from Roles;
+select * from User_roles;
