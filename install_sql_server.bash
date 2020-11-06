@@ -8,7 +8,10 @@ echo "Updating repository configuration mysql"
 sudo dpkg-reconfigure mysql-apt-config
 echo "Updating index repository"
 sudo apt-get update
-echo "Install mysql-server mysql-client"
-apt-get install mysql-server mysql-client
+echo "--------------------------------------------------------------"
+echo "Install mysql-server"
+apt-get install mysql-server
+echo "Install mysql-client"
+apt-get install mysql-client
 echo "Test service mysql"
 sudo systemctl status mysql
