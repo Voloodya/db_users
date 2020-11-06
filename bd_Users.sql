@@ -1,13 +1,10 @@
 CREATE DATABASE  IF NOT EXISTS `db_users` /*!40100 DEFAULT CHARACTER SET utf8mb4 */;
 USE `db_users`;
 
-Drop TABLE if exists user_roles;
-
-DROP TABLE if exists users;
-
-Drop TABLE if exists data_user;
-
-drop table if exists roles;
+Drop TABLE if exists User_roles;
+DROP TABLE if exists Users;
+Drop TABLE if exists Data_user;
+drop table if exists Roles;
 
 create table Data_user(
                           Id_data_user BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
